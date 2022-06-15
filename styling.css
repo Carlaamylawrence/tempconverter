@@ -17,3 +17,9 @@ h1 {
   text-shadow: #ceb1b1 2px 2px 2px;
   font-size: 80px;
 }
+
+@media only screen and (max-width: 425px) {
+  .input-control {
+    width: 30%;
+  }
+}

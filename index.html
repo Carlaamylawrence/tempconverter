@@ -22,8 +22,10 @@
   <body>
     <div class="row m-5">
       <div class="card">
-        <div class="col-lg-12">
-          <div class="container text-center m-4">
+        <div class="col p-4">
+          <div
+            class="container text-center m-4 d.flex justify-content-center align-items-center"
+          >
             <h1 class="pb-3">TEMPERATURE CONVERTER</h1>
             <h3>
               Enter a temperature in the appropriate blank and hit Convert to
@@ -31,9 +33,21 @@
             </h3>
 
             <h4 class="pt-3">FAHRENHEIT</h4>
-            <input type="text" id="fahrenheit" name="f" value="" />
+            <input
+              type="text"
+              id="fahrenheit"
+              name="f"
+              value=""
+              class="input-control"
+            />
             <h4 class="pt-3">CELSIUS</h4>
-            <input type="text" id="celsius" name="c" value="" />
+            <input
+              type="text"
+              id="celsius"
+              name="c"
+              value=""
+              class="input-control"
+            />
             <div id="result" class="p-3 text-center">
               <button class="btn btn-outline-light" id="convert">
                 Convert!
