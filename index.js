@@ -1,15 +1,22 @@
-function convertCelsius() {
-  let celsius = parseInt(document.getElementById("celsius").value);
+document.getElementById("convert").onclick = tempConvert;
+document.getElementById("clear").onclick = clearForm;
 
-  console.log(celsius, fahrenheit);
-  document.querySelector("#answercelsius").innerHTML;
-  let ctemp = (celsius * (9 / 5) + 32).toFixed(0);
-  answerincelsius.innerHTML = ctemp + "F";
+function tempConvert() {
+  var fahrenheit = document.getElementById("fahrenheit").value;
+  var celsius = document.getElementById("celsius").value;
+
+  if (fahrenheit != "") {
+    celsius = (parseFloat(fahrenheit) - 32) / 1.8;
+  } else {
+    fahrenheit = parseFloat(celsius) * 1.8 + 32;
+  }
+
+  document.getElementById("fahrenheit").value =
+    parseFloat(fahrenheit).toFixed(1);
+  document.getElementById("celsius").value = parseFloat(celsius).toFixed(1);
 }
 
-function convertFahrenheit() {
-  let fahrenheit = parseInt(document.getElementById("fahrenheit").value);
-  document.querySelector("#answerfahrenheit").innerHTML;
-  let ftemp = ((fahrenheit - 32) * (5 / 9)).toFixed(0);
-  answerinfahrenheit.innerHTML = ftemp + "C";
+function clearForm() {
+  document.getElementById("fahrenheit").value = "";
+  document.getElementById("celsius").value = "";
 }
